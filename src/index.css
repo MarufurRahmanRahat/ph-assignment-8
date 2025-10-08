@@ -1,2 +1,16 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+.common-style{
+    @apply
+    sm: px-2.5,
+    md: px-10,
+    lg: px-20   
+}
+
+.common-color{
+    
+    
+}
+
