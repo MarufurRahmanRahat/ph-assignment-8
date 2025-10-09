@@ -6,7 +6,7 @@ import git from '../assets/fi_2111432.png';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm common-style">
+        <div className="navbar bg-base-100 shadow-sm ">
 
             <div className="navbar-start">
                 <div className="dropdown">
@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end">
-                <NavLink className="btn bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)100%)] text-white">
+                <NavLink to='/' className="btn bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)100%)] text-white">
                     <img src={git} alt="git-logo" />Contribute</NavLink>
             </div>
 
