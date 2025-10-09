@@ -2,16 +2,16 @@
 @plugin "daisyui";
 
 
-/* .common-style{
+.common-style{
     @apply
     px-2,
-    sm: px-3
-    md: px-16,
-    lg: px-20  
+    sm:px-3
+    md:px-16,
+    lg:px-20  
 }
 
 .common-color{
     
     
-} */
+}
 
