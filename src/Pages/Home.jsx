@@ -2,11 +2,14 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router';
 import Banner from '../Components/Banner';
 import Appcard from '../Components/Appcard';
+import useProducts from '../Hooks/useProducts';
 
 const Home = () => {
-    const products = useLoaderData()
+    // const products = useLoaderData()
+    const {products,loading,error} = useProducts()
+    
     const featuredProducts = products.slice(0, 8);
-    console.log(products)
+    
     return (
 
         <div>
