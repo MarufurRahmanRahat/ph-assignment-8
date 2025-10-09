@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "https://source.unsplash.com/400x400/?productivity,app",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80",
     "title": "TaskFlow",
     "companyName": "FlowTech Ltd.",
     "description": "Organize your tasks, set reminders, and boost productivity with TaskFlow.",
@@ -19,7 +19,7 @@
   },
   {
     "id": 2,
-    "image": "https://source.unsplash.com/400x400/?fitness,app",
+    "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=400&q=80",
     "title": "FitLife",
     "companyName": "Wellness Hub",
     "description": "Track your workouts, calories, and stay motivated with FitLife.",
@@ -37,7 +37,7 @@
   },
   {
     "id": 3,
-    "image": "https://source.unsplash.com/400x400/?music,app",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=400&q=80",
     "title": "TuneStream",
     "companyName": "Harmony Labs",
     "description": "Listen to your favorite music and podcasts anywhere, anytime.",
@@ -55,7 +55,7 @@
   },
   {
     "id": 4,
-    "image": "https://source.unsplash.com/400x400/?shopping,app",
+    "image": "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?auto=format&fit=crop&w=400&q=80",
     "title": "ShopEase",
     "companyName": "EasyBuy Corp.",
     "description": "Discover new deals, shop securely, and get your orders faster with ShopEase.",
@@ -71,9 +71,9 @@
       { "name": "5 star", "count": 290 }
     ]
   },
-  {
+   {
     "id": 5,
-    "image": "https://source.unsplash.com/400x400/?education,app",
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=400&q=80",
     "title": "EduSpark",
     "companyName": "Learnify",
     "description": "Learn coding, design, and more from experts with interactive lessons.",
@@ -91,7 +91,7 @@
   },
   {
     "id": 6,
-    "image": "https://source.unsplash.com/400x400/?finance,app",
+    "image": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=400&q=80",
     "title": "FinTrack",
     "companyName": "MoneyWise Ltd.",
     "description": "Track expenses, manage budgets, and grow savings with FinTrack.",
@@ -109,7 +109,7 @@
   },
   {
     "id": 7,
-    "image": "https://source.unsplash.com/400x400/?camera,app",
+    "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=400&q=80",
     "title": "SnapShot",
     "companyName": "Visionary Labs",
     "description": "Capture high-quality photos with AI-powered filters and effects.",
@@ -127,7 +127,7 @@
   },
   {
     "id": 8,
-    "image": "https://source.unsplash.com/400x400/?travel,app",
+    "image": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=400&q=80",
     "title": "TripMate",
     "companyName": "Wanderlust Co.",
     "description": "Plan your trips, find best hotels, and get real-time travel updates.",
@@ -145,7 +145,7 @@
   },
   {
     "id": 9,
-    "image": "https://source.unsplash.com/400x400/?weather,app",
+    "image": "https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?auto=format&fit=crop&w=400&q=80",
     "title": "WeatherNow",
     "companyName": "SkyTech",
     "description": "Get real-time weather updates, forecasts, and alerts for your location.",
@@ -163,7 +163,7 @@
   },
   {
     "id": 10,
-    "image": "https://source.unsplash.com/400x400/?books,app",
+    "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80",
     "title": "Readify",
     "companyName": "SmartRead",
     "description": "Thousands of books and audiobooks at your fingertips.",
@@ -181,7 +181,7 @@
   },
   {
     "id": 11,
-    "image": "https://source.unsplash.com/400x400/?game,app",
+    "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80",
     "title": "Galaxy Run",
     "companyName": "Nova Studios",
     "description": "Endless running adventure through galaxies and planets.",
@@ -199,7 +199,7 @@
   },
   {
     "id": 12,
-    "image": "https://source.unsplash.com/400x400/?photo,editor,app",
+    "image": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=400&q=80",
     "title": "PicFix",
     "companyName": "CreativeSoft",
     "description": "Photo editor with AI filters and one-tap background remover.",
@@ -217,7 +217,7 @@
   },
   {
     "id": 13,
-    "image": "https://source.unsplash.com/400x400/?meditation,app",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80",
     "title": "CalmEase",
     "companyName": "MindSpace Ltd.",
     "description": "Relax your mind with guided meditations, sleep sounds, and breathing sessions.",
@@ -235,7 +235,7 @@
   },
   {
     "id": 14,
-    "image": "https://source.unsplash.com/400x400/?news,app",
+    "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80",
     "title": "NewsSphere",
     "companyName": "InfoWave Media",
     "description": "Get personalized breaking news, politics, and global updates in real time.",
@@ -253,7 +253,7 @@
   },
   {
     "id": 15,
-    "image": "https://source.unsplash.com/400x400/?chat,app",
+    "image": "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=400&q=80",
     "title": "ChatLoop",
     "companyName": "Connectify",
     "description": "Chat with your friends securely and share files instantly with ChatLoop.",
@@ -269,9 +269,9 @@
       { "name": "5 star", "count": 3100 }
     ]
   },
-  {
+   {
     "id": 16,
-    "image": "https://source.unsplash.com/400x400/?calendar,app",
+    "image": "https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400&q=80",
     "title": "TimeGrid",
     "companyName": "OrganizePro",
     "description": "Smart calendar and event planner that syncs across all your devices.",
@@ -289,7 +289,7 @@
   },
   {
     "id": 17,
-    "image": "https://source.unsplash.com/400x400/?food,app",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80",
     "title": "MealMaster",
     "companyName": "TastyTech",
     "description": "Discover delicious recipes and track your daily nutrition goals easily.",
@@ -307,7 +307,7 @@
   },
   {
     "id": 18,
-    "image": "https://source.unsplash.com/400x400/?security,app",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80",
     "title": "SafeLock",
     "companyName": "CyberGuard Inc.",
     "description": "Keep your files and passwords secure with encrypted cloud storage.",
@@ -325,7 +325,7 @@
   },
   {
     "id": 19,
-    "image": "https://source.unsplash.com/400x400/?language,learning,app",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80",
     "title": "LingoBoost",
     "companyName": "EduVerse",
     "description": "Learn new languages interactively with flashcards and quizzes.",
@@ -343,7 +343,7 @@
   },
   {
     "id": 20,
-    "image": "https://source.unsplash.com/400x400/?transport,app",
+    "image": "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=400&q=80",
     "title": "RideGo",
     "companyName": "UrbanMove",
     "description": "Book cabs, bikes, and rides instantly with real-time GPS tracking.",
@@ -361,7 +361,7 @@
   },
   {
     "id": 21,
-    "image": "https://source.unsplash.com/400x400/?photo,filter,app",
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80",
     "title": "Aesthetica",
     "companyName": "Pixel Studio",
     "description": "AI-powered filters and effects to turn every photo into art.",
@@ -379,7 +379,7 @@
   },
   {
     "id": 22,
-    "image": "https://source.unsplash.com/400x400/?banking,app",
+    "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=400&q=80",
     "title": "QuickPay",
     "companyName": "FinServe",
     "description": "Send money instantly, pay bills, and track all transactions securely.",
@@ -397,7 +397,7 @@
   },
   {
     "id": 23,
-    "image": "https://source.unsplash.com/400x400/?maps,navigation,app",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80",
     "title": "PathFinder",
     "companyName": "GeoSmart Ltd.",
     "description": "Find the best routes, traffic updates, and offline maps with PathFinder.",
@@ -415,7 +415,7 @@
   },
   {
     "id": 24,
-    "image": "https://source.unsplash.com/400x400/?video,editing,app",
+    "image": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=400&q=80",
     "title": "ClipCraft",
     "companyName": "MediaPro",
     "description": "Edit videos professionally with transitions, effects, and music layers.",
