@@ -1,16 +1,38 @@
-# React + Vite
+#  Hero.IO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Hero.IO** is a modern web application designed to showcase and explore popular apps with their detailed descriptions, download statistics, and user ratings. The project provides a clean, responsive, and interactive interface built using **React** and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Description
 
-## React Compiler
+Hero.IO allows users to browse a collection of top-rated and trending apps across various categories.  
+Each app card displays essential details such as the app’s name, company, description, number of downloads, and average rating.  
+Users can view detailed pages for each app, explore user reviews, and visualize app performance through charts (like rating distribution using bar charts).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+###  Features
+- Interactive and responsive design with Tailwind CSS  
+- Dynamic app listing using JSON data  
+- App detail pages with images, descriptions, and statistics  
+- Rating visualization using charts  
+- Search and filter functionality  
+- Context API for managing state (like installed status)  
+- Google Play integration (links open in a new tab)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Technologies Used
+
+| Category | Technologies |
+|-----------|---------------|
+| **Frontend** | React.js, React Router DOM |
+| **Styling** | Tailwind CSS, DaisyUI |
+| **State Management** | React Context API |
+| **Charts & Visualization** | Recharts |
+| **Tools** |  Create React App, ESLint |
+| **Package Management** | npm |
+
+---
+
+
+
