@@ -64,7 +64,7 @@ const AppDetails = () => {
 
             {/* charts */}
             <div className="p-4 rounded-2xl shadow-md my-10">
-                <h2 className="text-lg font-semibold mb-5 pl-4">Ratings</h2>
+                <h2 className="text-[24px] font-semibold mb-5 pl-4">Ratings</h2>
                 <ResponsiveContainer width="100%" height={250}>
                     <BarChart
                         layout="vertical"
@@ -78,6 +78,12 @@ const AppDetails = () => {
                         <Bar dataKey="count" fill="#FF8C00" barSize={25} radius={[0, 6, 6, 0]} />
                     </BarChart>
                 </ResponsiveContainer>
+            </div>
+
+            {/* description */}
+            <div className="mt-10">
+                <h1 className='text-[24px] font-semibold mb-5'>Description</h1>
+                <p className='font-normal text-[16px]'>{description}</p>
             </div>
 
         </div>
