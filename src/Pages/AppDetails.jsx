@@ -37,7 +37,6 @@ const AppDetails = () => {
                 </div>
                 <div className="">
                     <h1 className='font-bold text-[32px]'>{title}</h1>
-                    <p className='font-bold text-[20px]'>{description}</p>
                     <p className='font-bold text-[16px]'>Developed by {companyName}</p>
 
                     <div className="flex gap-[24px] items-center pt-8 pb-6">

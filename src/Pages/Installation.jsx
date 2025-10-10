@@ -9,7 +9,28 @@ const Installation = () => {
         const savedList = JSON.parse(localStorage.getItem('wishlist'))
         if (savedList) setWishlist(savedList)
     }, [])
-    console.log(wishlist.length)
+    
+    const sortedItem = (
+        () => {
+        if(sortOrder==='price-asc'){
+            return [...wishlist].sort((a,b) => {
+                const A = parseFloat(a.downloads.replace('M', ''));
+                const B = parseFloat(b.downloads.replace('M', ''));
+          return A - B;  
+            })
+        }
+        else if(sortOrder==='price-desc'){
+            return [...wishlist].sort((a,b) =>  {
+                const A = parseFloat(a.downloads.replace('M', ''));
+                const B = parseFloat(b.downloads.replace('M', ''));
+          return B - A;  
+            })
+        }
+        else{
+            return wishlist
+        }
+    })()
+
     return (
         <div className='p-3 sm:p-8 md:p-14 lg:p-20 '>
             <div className="text-center mb-10">
@@ -17,7 +38,7 @@ const Installation = () => {
                 <p className='font-normal text-[20px]'>Explore All Trending Apps on the Market developed by us</p>
             </div>
             <div className="flex justify-between mb-5">
-                <h1 className='font-semibold text-[24px]'>({wishlist.length})Apps found</h1>
+                <h1 className='font-semibold text-[24px]'>({sortedItem.length})Apps found</h1>
                 <label className='form-control w-full max-w-xs'>
                     <select
                     className='select select-bordered' 
@@ -32,7 +53,7 @@ const Installation = () => {
 
             <div className="">
                 {
-                    wishlist.map(p => (
+                    sortedItem.map(p => (
                         <div className="flex justify-between items-center p-4 bg-[#FFFFFF] mb-4">
                             <div className="flex items-center gap-[20px]">
                                 <img className='w-20 h-20 rounded-xl' src={p.image} alt="" />
