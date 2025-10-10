@@ -14,6 +14,20 @@ const AppDetails = () => {
     if (loading) return <p>Loading...</p>
     const { image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings } = product
 
+    const handleAddToList = () => {
+        const existingList = JSON.parse(localStorage.getItem('wishlist'))
+        let updatedList = []
+        if(existingList) {
+            const isDuplicate = existingList.some(p => p.id === product.id)
+            if(isDuplicate) return alert('sorry vai')
+                updatedList=[...existingList,product]
+        }
+        else{
+              updatedList.push(product)
+        }
+        localStorage.setItem('wishlist',JSON.stringify(updatedList))
+    }
+
     return (
         <div className='p-3 sm:p-8 md:p-14 lg:p-20'>
 
@@ -43,7 +57,7 @@ const AppDetails = () => {
                             <h1 className='font-extrabold text-[30px]'>{reviews}</h1>
                         </div>
                     </div>
-                     <Link className='btn btn-secondary'>Install Now ({size}MB)</Link>
+                     <Link onClick={handleAddToList} className='btn btn-secondary'>Install Now ({size}MB)</Link>
                 </div>
             </div>
 
