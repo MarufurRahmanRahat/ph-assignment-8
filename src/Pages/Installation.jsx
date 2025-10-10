@@ -2,16 +2,20 @@ import React, { useEffect, useState } from 'react';
 import star from '../assets/star.png'
 import down from '../assets/down.png'
 import { toast } from 'react-toastify';
+import useProducts from '../Hooks/useProducts';
+import LoadingSpinner from '../Components/LoadingSpinner';
 
 
 const Installation = () => {
-
+    const {loading} = useProducts();
+    
     const [wishlist, setWishlist] = useState([])
     const [sortOrder,setSortOrder] = useState('none')
     useEffect(() => {
         const savedList = JSON.parse(localStorage.getItem('wishlist'))
         if (savedList) setWishlist(savedList)
     }, [])
+if(loading) return <LoadingSpinner></LoadingSpinner>
     
     const sortedItem = (
         () => {

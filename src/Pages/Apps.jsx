@@ -2,10 +2,20 @@ import React, { useState } from 'react';
 import useProducts from '../Hooks/useProducts';
 import { Link } from 'react-router';
 import Appcard from '../Components/Appcard';
+import LoadingSpinner from '../Components/LoadingSpinner';
 
 const Apps = () => {
-    const {products}=useProducts()
+    const {products,loading}=useProducts()
     const [search,setSearch] = useState('')
+    const [loader,setLoader] = useState(false);
+    const handleSearchItem = (item)=>{
+          setSearch(item.target.value)
+          setLoader(true);
+          setTimeout(() => {
+      setLoader(false);
+    }, 500);
+    }
+    if(loading) return <LoadingSpinner></LoadingSpinner>
     const term = search.trim().toLocaleLowerCase()
     const searchedProducts = term
     ? products.filter(product =>
@@ -26,16 +36,19 @@ const Apps = () => {
                     <label className='input'>
                         <input 
                         value={search}
-                        onChange={e => setSearch(e.target.value)}
+                        onChange={handleSearchItem}
                          type="search" placeholder='Search Apps' />
                     </label>
                 </div>
+                {
+                    loader&&<LoadingSpinner></LoadingSpinner>
+                }
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-                    {searchedProducts.length?(
+                    {!loader && searchedProducts.length?(
                       searchedProducts.map(product => (
                             <Appcard key={product.id} product={product} />
                         ))
-                    ):<p>Not found</p>
+                    ):(!loader && <p>NOt Found</p>)
                         
                     }
                 </div>

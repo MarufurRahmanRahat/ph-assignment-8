@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useParams } from 'react-router';
 import useProducts from '../Hooks/useProducts';
 import downlogo from '../assets/icon-downloads.png'
@@ -7,14 +7,15 @@ import reviewlogo from '../assets/icon-review.png'
 import { Bar, BarChart, CartesianGrid, Legend, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import Error from './Error';
 import { toast } from "react-toastify";
+import LoadingSpinner from '../Components/LoadingSpinner';
 const AppDetails = () => {
     const { id } = useParams()
-    const { products, loading, error } = useProducts()
+    const { products, loading} = useProducts()
     
     
     
     const product = products.find(p => String(p.id) === id)
-    if (loading) return <p>Loading...</p>
+    if (loading) return <LoadingSpinner></LoadingSpinner>
     if(!product) return <Error></Error>
     const { image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings } = product
 

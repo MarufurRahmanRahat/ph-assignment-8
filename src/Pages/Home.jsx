@@ -3,11 +3,12 @@ import { Link, useLoaderData } from 'react-router';
 import Banner from '../Components/Banner';
 import Appcard from '../Components/Appcard';
 import useProducts from '../Hooks/useProducts';
+import LoadingSpinner from '../Components/LoadingSpinner';
 
 const Home = () => {
     // const products = useLoaderData()
     const {products,loading,error} = useProducts()
-    
+    if(loading) return <LoadingSpinner></LoadingSpinner>
     const featuredProducts = products.slice(0, 8);
     
     return (

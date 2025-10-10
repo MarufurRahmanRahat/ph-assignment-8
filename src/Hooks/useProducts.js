@@ -20,7 +20,7 @@ const useProducts = () =>{
         .finally(() =>{
                     setTimeout(() => {
        setLoading(false);
-    }, 400); 
+    }, 500); 
         })
     },[])
 
