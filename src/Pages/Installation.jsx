@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import star from '../assets/star.png'
 import down from '../assets/down.png'
 import { toast } from 'react-toastify';
 import useProducts from '../Hooks/useProducts';
 import LoadingSpinner from '../Components/LoadingSpinner';
+import { ContextApiInstalled } from './ContextApiInstalled';
 
 
 const Installation = () => {
     const {loading} = useProducts();
-    
+    const {install,setInstall} = useContext(ContextApiInstalled)
     const [wishlist, setWishlist] = useState([])
     const [sortOrder,setSortOrder] = useState('none')
     useEffect(() => {
@@ -88,7 +89,13 @@ if(loading) return <LoadingSpinner></LoadingSpinner>
                             
                             <div className="">
                                 <button 
-                                onClick={() => handleRemove(p.id,p.title)}  
+                                onClick={() => {
+                                   handleRemove(p.id,p.title)
+                                   localStorage.removeItem(`Item_${p.id}`)
+                                }
+                                    
+                                    
+                                }  
                                 className='btn bg-[#00D390] text-[#FFFFFF] '>Uninstall</button>
                             </div>
 

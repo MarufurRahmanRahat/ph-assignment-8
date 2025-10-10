@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router';
 import useProducts from '../Hooks/useProducts';
 import downlogo from '../assets/icon-downloads.png'
@@ -8,12 +8,19 @@ import { Bar, BarChart, CartesianGrid, Legend, Rectangle, ResponsiveContainer, T
 import Error from './Error';
 import { toast } from "react-toastify";
 import LoadingSpinner from '../Components/LoadingSpinner';
+import { ContextApiInstalled } from './ContextApiInstalled';
 const AppDetails = () => {
     const { id } = useParams()
     const { products, loading} = useProducts()
     
+    const {install,setInstall} = useContext(ContextApiInstalled)
     
-    
+    const checkInstalled = (key) => !!localStorage.getItem(`Item_${key}`);
+
+      useEffect(() => {
+       setInstall(checkInstalled(id));
+       }, [id]);
+
     const product = products.find(p => String(p.id) === id)
     if (loading) return <LoadingSpinner></LoadingSpinner>
     if(!product) return <Error></Error>
@@ -62,7 +69,11 @@ const AppDetails = () => {
                             <h1 className='font-extrabold text-[30px]'>{reviews}</h1>
                         </div>
                     </div>
-                    <Link onClick={handleAddToList} className='btn bg-[#00D390] text-[#FFFFFF]'>Install Now ({size}MB)</Link>
+                    <Link onClick={()=>{
+                        handleAddToList();
+                        setInstall(true);
+                        localStorage.setItem(`Item_${id}`,true)
+                    }} className='btn bg-[#00D390] text-[#FFFFFF]'>{install?'Installed':`Install Now (${size} MB)`}</Link>
                 </div>
             </div>
 

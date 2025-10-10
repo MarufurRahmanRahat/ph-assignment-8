@@ -48,7 +48,10 @@ const Apps = () => {
                       searchedProducts.map(product => (
                             <Appcard key={product.id} product={product} />
                         ))
-                    ):(!loader && <p>NOt Found</p>)
+                    ):(!loader && 
+                    <div className=' flex items-center justify-center col-span-full py-20'>
+                        <p className='text-[#627382] text-6xl font-semibold'>No Apps Found</p>
+                    </div>)
                         
                     }
                 </div>
