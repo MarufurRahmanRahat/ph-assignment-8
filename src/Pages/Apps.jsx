@@ -18,7 +18,7 @@ const Apps = () => {
         <div>
            <div className="p-3 sm:p-8 md:p-14 lg:p-20  py-3 sm:py-8 md:py-14 lg:py-20">
                 <div className="text-center pb-10">
-                    <h1 className='font-bold text-5xl pb-4'>Our All Applications</h1>
+                    <h1 className='font-bold text-3xl md:text-5xl pb-4'>Our All Applications</h1>
                     <p className='font-normal text-[20px]'>Explore All Apps on the Market developed by us. We code for Millions</p>
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
@@ -31,10 +31,12 @@ const Apps = () => {
                     </label>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-                    {
-                        searchedProducts.map(product => (
+                    {searchedProducts.length?(
+                      searchedProducts.map(product => (
                             <Appcard key={product.id} product={product} />
                         ))
+                    ):<p>Not found</p>
+                        
                     }
                 </div>
                 {/* <div className="py-10 text-center">

@@ -5,14 +5,17 @@ import downlogo from '../assets/icon-downloads.png'
 import starlogo from '../assets/icon-ratings.png'
 import reviewlogo from '../assets/icon-review.png'
 import { Bar, BarChart, CartesianGrid, Legend, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-
+import Error from './Error';
+import { toast } from "react-toastify";
 const AppDetails = () => {
     const { id } = useParams()
     const { products, loading, error } = useProducts()
-    console.log(products)
+    
+    
+    
     const product = products.find(p => String(p.id) === id)
-    console.log(product)
     if (loading) return <p>Loading...</p>
+    if(!product) return <Error></Error>
     const { image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings } = product
 
     const handleAddToList = () => {
@@ -20,25 +23,26 @@ const AppDetails = () => {
         let updatedList = []
         if (existingList) {
             const isDuplicate = existingList.some(p => p.id === product.id)
-            if (isDuplicate) return alert('sorry vai')
+            if (isDuplicate) return toast.error(`${title} is already installed!`)
             updatedList = [...existingList, product]
         }
         else {
             updatedList.push(product)
         }
+        toast.success(`${title} is installed successfully!!`)
         localStorage.setItem('wishlist', JSON.stringify(updatedList))
     }
 
     return (
         <div className='p-3 sm:p-8 md:p-14 lg:p-20'>
 
-            <div className="flex gap-[30px]">
+            <div className="flex flex-col sm:flex-row gap-[30px]">
                 <div className="">
                     <img className='h-full' src={image} alt="company-img" />
                 </div>
                 <div className="">
                     <h1 className='font-bold text-[32px]'>{title}</h1>
-                    <p className='font-bold text-[16px]'>Developed by {companyName}</p>
+                    <p className='font-bold text-[16px] '>Developed by <span className='text-[#9F62F2]'>{companyName}</span></p>
 
                     <div className="flex gap-[24px] items-center pt-8 pb-6">
                         <div className="">
@@ -57,7 +61,7 @@ const AppDetails = () => {
                             <h1 className='font-extrabold text-[30px]'>{reviews}</h1>
                         </div>
                     </div>
-                    <Link onClick={handleAddToList} className='btn btn-secondary'>Install Now ({size}MB)</Link>
+                    <Link onClick={handleAddToList} className='btn bg-[#00D390] text-[#FFFFFF]'>Install Now ({size}MB)</Link>
                 </div>
             </div>
 

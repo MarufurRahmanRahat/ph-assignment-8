@@ -2,16 +2,8 @@
 @plugin "daisyui";
 
 
-/* .common-style{
-    @apply
-    px-2,
-    sm:px-3
-    md:px-16,
-    lg:px-20  
+.active{
+  border-bottom: 3px solid blueviolet;
+  color: blueviolet;
+  border-radius: 0px;
 }
-
-.common-color{
-    
-    
-} */
-

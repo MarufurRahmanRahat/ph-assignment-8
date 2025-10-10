@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import star from '../assets/star.png'
+import down from '../assets/down.png'
+import { toast } from 'react-toastify';
 
 
 const Installation = () => {
@@ -31,7 +34,8 @@ const Installation = () => {
         }
     })()
 
-    const handleRemove = id => {
+    const handleRemove = (id,title) => {
+        toast.success(`${title} uninstalled!!`)
         const existingList = JSON.parse(localStorage.getItem('wishlist'))
         let updatedList = existingList.filter(p => p.id !== id)
         //for ui instant update
@@ -43,7 +47,7 @@ const Installation = () => {
     return (
         <div className='p-3 sm:p-8 md:p-14 lg:p-20 '>
             <div className="text-center mb-10">
-                <h1 className='font-bold text-[48px]'>Your Installed Apps</h1>
+                <h1 className='font-bold text-3xl sm:text-[48px]'>Your Installed Apps</h1>
                 <p className='font-normal text-[20px]'>Explore All Trending Apps on the Market developed by us</p>
             </div>
             <div className="flex justify-between mb-5">
@@ -63,23 +67,25 @@ const Installation = () => {
             <div className="">
                 {
                     sortedItem.map(p => (
-                        <div className="flex justify-between items-center p-4 bg-[#FFFFFF] mb-4">
+                        <div className="flex flex-col gap-6 sm:flex-row justify-between items-center p-4 bg-[#FFFFFF] mb-4">
                             <div className="flex items-center gap-[20px]">
                                 <img className='w-20 h-20 rounded-xl' src={p.image} alt="" />
                                 <div className="">
                                 <h1 className='font-medium text-[20px]'>{p.title}</h1>
                                 <div className="flex gap-[20px]">
-                                    <p className='font-medium text-[16px]'>{p.downloads}</p>
-                                    <p className='font-medium text-[16px]'>{p.ratingAvg}</p>
-                                    <p className='font-medium text-[16px]'>{p.size}MB</p>
+                                    <p className='font-medium text-[16px] text-[#00D390] flex gap-1 justify-center items-center'>
+                                        <img className='w-4 h-4' src={down} alt="" />{p.downloads}</p>
+                                    <p className='font-medium text-[16px] text-[#FF8811] flex gap-1 justify-center items-center'>
+                                       <img className='w-4 h-4' src={star} alt="" />{p.ratingAvg}</p>
+                                    <p className='font-medium text-[16px] text-[#627382]'>{p.size} MB</p>
                                 </div>
                             </div>
                             </div>
                             
                             <div className="">
                                 <button 
-                                onClick={() => handleRemove(p.id)}  
-                                className='btn btn-secondary'>Uninstall</button>
+                                onClick={() => handleRemove(p.id,p.title)}  
+                                className='btn bg-[#00D390] text-[#FFFFFF] '>Uninstall</button>
                             </div>
 
                         </div>

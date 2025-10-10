@@ -9,10 +9,19 @@ const useProducts = () =>{
     
     useEffect(() =>{
         setLoading(true)
+        setError(null)
         axios('../Card.json')
         .then(data => setProducts(data.data))
-        .catch(err => setError(err))
-        .finally(() => setLoading(false))
+        .catch(err =>{
+            console.log("Error ",err);
+            
+            setError(err)
+        } )        
+        .finally(() =>{
+                    setTimeout(() => {
+       setLoading(false);
+    }, 400); 
+        })
     },[])
 
     return {products, loading, error}

@@ -20,7 +20,7 @@ const Navbar = () => {
                             <NavLink to='/'>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/app-details'>Apps</NavLink>
+                            <NavLink to='/apps'>Apps</NavLink>
                         </li>
                         <li>
                             <NavLink to='/installation'>Installation</NavLink>
@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end">
-                <NavLink to='https://github.com/MarufurRahmanRahat/ph-assignment-8' className="btn bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)100%)] text-white">
+                <NavLink to='https://github.com/MarufurRahmanRahat' target="_blank" className="btn bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)100%)] text-white">
                     <img src={git} alt="git-logo" />Contribute</NavLink>
             </div>
 
