@@ -31,6 +31,15 @@ const Installation = () => {
         }
     })()
 
+    const handleRemove = id => {
+        const existingList = JSON.parse(localStorage.getItem('wishlist'))
+        let updatedList = existingList.filter(p => p.id !== id)
+        //for ui instant update
+        setWishlist(prev => prev.filter(p => p.id !== id))
+        
+        localStorage.setItem('wishlist',JSON.stringify(updatedList))
+    }
+
     return (
         <div className='p-3 sm:p-8 md:p-14 lg:p-20 '>
             <div className="text-center mb-10">
@@ -68,7 +77,9 @@ const Installation = () => {
                             </div>
                             
                             <div className="">
-                                <button className='btn btn-secondary'>Uninstall</button>
+                                <button 
+                                onClick={() => handleRemove(p.id)}  
+                                className='btn btn-secondary'>Uninstall</button>
                             </div>
 
                         </div>
